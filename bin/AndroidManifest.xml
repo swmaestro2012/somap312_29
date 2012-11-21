@@ -1,0 +1,177 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.soma.chronos"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="15" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="SplashActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.SPLASH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".camera.DefaultCameraActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.CAMERA.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".preview.PreviewActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.PREVIEW.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".processing.DefaultProcessingActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.PROCESSING.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".result.DefaultResultActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.RESULT.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gallery.GalleryActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.GALLERY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gallery.SelectPreviewActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.SELECT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contacts.ContactsListActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.CONTACTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contacts.ContactsCameraActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.CONTACTS.CAMERA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contacts.ContactsResultActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.RESULT.CONTACTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contacts.ContactsProcessingActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.PROCESSING.CONTACTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mosaic.MosaicCameraActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.CAMERA.MOSAIC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mosaic.MosaicProcessingActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.PROCESSING.MOSAIC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mosaic.MosaicResultActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="chronos.intent.action.RESULT.MOSAIC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
